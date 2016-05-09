@@ -46,41 +46,41 @@
     <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css"> -->
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Hello World</title>
+    <title>Welcome to movieBuff</title>
 </head>
 
 <body>
-<!-- <div id='container'>
-    <h1 class="title">movieBuff io</h1>
-    <p> Type in the name of your favourite actor and hit 'search' to see their best films!</p>
-    <div id="inputForm">
-    <input id="searchInput" type ="text" name="actor">
-    </div>
-    <button id="button" type="button">Search</button>
-<div id="face">
-</div>
-    <div id='results'>
-        
-    </div>
-</div>
- -->
+
 <div data-role="page">
  
-    <div data-role="header">
-        <h1 class="title">movieBuff</h1>
+    <div data-role="header" class="header">
+        <p class="title">movieBuff</p>
     </div><!-- /header -->
 
-    <div role="main" class="ui-content">
-        <p> Type in the name of your favourite actor and hit 'search' to see their best films!</p>
-            <input id="searchInput" data-wrapper-class="ui-custom" type ="text" name="actor">
-        <a href="#" data-role="button" data-icon="star" id="button">Searh</a>
-    <div id="face"></div>
-    <div id='results'></div>
+    <div id="landingPage">
+        <div role="main" class="ui-content">
+        <div>
+            <a href="search.html" id="landingPage"></a>
+            <p id='welcome'>Welcome to the movieBuff. Type in the name of your favourite actor and hit 'search' to see their best films!</p>
+        </div>
     </div><!-- /content -->
+    </div>
 
-    <div data-role="footer">
-        <h4>movieBuff footer</h4>
-    </div><!-- /footer -->
+
+    <div id="searchPage">
+        <div role="main" class="ui-content">
+            <p> Type in the name of your favourite actor and hit 'search' to see their best films!</p>
+                <input id="searchInput" data-wrapper-class="ui-custom" type ="text" name="actor">
+            <a href="#" data-role="button" data-icon="star" id="button">Searh</a>
+        <div id="face"></div>
+        <div id='results'></div>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <h4>movieBuff footer</h4>
+        </div><!-- /footer -->
+    </div> <!-- end of searchPage -->   
+
  
 </div><!-- /page -->
 

@@ -1,12 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,300);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 body{
   background: #9E59C2;
+  font-family: 'Roboto Mono';
 }
 
 #searchInput{
-  font-family: 'Inconsolata', ;
+  font-family: 'Inconsolata';
   font-weight: 700;
   text-align: center;
   height: 80px;
@@ -20,7 +21,41 @@ body{
    box-shadow: none;
 }
 
+.ui-header{
+  border: none;
+}
 
+#landingPage{
+  display: block;
+  width: 100%;
+  height: 400px;
+  background: transparent;
+}
+
+.header{
+  background: #706CBA;
+  height: 60px;
+}
+
+#mainLandingPage{
+  background: #9B95FF;
+}
+#title{
+  margin-top: 30px;
+  font-family: 'Inconsolata';
+  text-transform: lowercase;
+  font-weight: 700px;
+  font-size: 20px;
+  color: #fff;
+  font-style: normal;
+  text-align: center;
+}
+#welcomeText{
+  text-transform: none;
+  text-align: center;
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+}
 
 
 

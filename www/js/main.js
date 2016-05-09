@@ -1,7 +1,11 @@
 var request = require('superagent')
 
 
+
 $(document).ready(function() {
+ console.log("document ready")
+
+
 
   //Tells jquery to wait until dom has loaded before loading jquery
   $("#button").click(searchActor)
@@ -62,3 +66,4 @@ function searchActor() {
 
   }
 })
+

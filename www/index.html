@@ -44,7 +44,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.css"> -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.css">
     <link rel="stylesheet" href="css/style.css">
@@ -53,45 +53,75 @@
 
 <body>
 
-<div data-role="page" id="pagepiling">
- 
-    <div data-role="header" class="header">
-        <p class="title">movieBuff</p>
+<!-- ***************** PAGE 1 *********************** -->
+    <div data-role="page" id="one">
+
+    <div data-role="header" data-position="fixed" class="header">
+        <h1>The MovieBuff</h1>
     </div><!-- /header -->
 
-    <div id="landingPage" class="section">
-        <div role="main" class="ui-content">
-        <div>
-            <!-- <a href="search.html" id="landingPage"></a> -->
-            <p id='welcome'>Welcome to the movieBuff. Type in the name of your favourite actor and hit 'search' to see their best films!</p>
-        </div>
+    <div data-role="content" >  
+        <h2>Welcome to movie buff</h2>
+        
+        <p id='welcome'>Welcome to the movieBuff. Type in the name of your favourite actor and hit 'search' to see their best films!</p>
+
+        <h3>Show internal pages:</h3>
+        <p><a href="#two" data-role="button">Show page "two"</a></p>
     </div><!-- /content -->
-    </div>
+    
+    <div data-role="footer" data-position="fixed">
+        <h4>The MovieBuff</h4>
+    </div><!-- /footer -->
+</div><!-- /page one -->
 
+<!-- ***************** PAGE 2 *********************** -->
 
-    <div id="searchPage" class="section">
-        <div role="main" class="ui-content">
-            <p> Type in the name of your favourite actor and hit 'search' to see their best films!</p>
+<div data-role="page" id="two">
+
+    <div data-role="header" data-position="fixed" class="header">
+        <h1>The MovieBuff</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">    
+        <p> Type in the name of your favourite actor and hit 'search' to see their best films!</p>
                 <input id="searchInput" data-wrapper-class="ui-custom" type ="text" name="actor">
-            <a href="#" data-role="button" data-icon="star" id="button">Searh</a>
+            <a href="#three" data-role="button" data-icon="star" id="button">Search</a>
+        
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed">
+        <h4>The MovieBuff</h4>
+    </div><!-- /footer -->
+</div><!-- /page two -->
+
+<!-- ***************** PAGE 3 *********************** -->
+
+<div data-role="page" id="three">
+
+    <div data-role="header" data-position="fixed" class="header">
+        <h1>The MovieBuff</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">  
         <div id="face"></div>
-        <div id='results'></div>
-        </div><!-- /content -->
+        <div id='results'></div>  
+      <p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p> 
+        
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed">
+        <h4>The MovieBuff</h4>
+    </div><!-- /footer -->
+</div><!-- /page two -->
 
-        <div data-role="footer" data-position="fixed">
-            <h4>movieBuff footer</h4>
-        </div><!-- /footer -->
-    </div> <!-- end of searchPage -->   
 
- 
-</div><!-- /page -->
+
 
 
     <script type="text/javascript" src="cordova.js"></script>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
-    <script src="https://cdn.rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/bundle.js"></script>
 

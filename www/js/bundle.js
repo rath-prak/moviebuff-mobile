@@ -1492,7 +1492,7 @@ var request = require('superagent')
 $(document).ready(function() {
  console.log("document ready")
 
-
+// $('#pagepiling').pagepiling({direction: 'horizontal', loopBottom: 'true'});
 
   //Tells jquery to wait until dom has loaded before loading jquery
   $("#button").click(searchActor)
@@ -1529,15 +1529,19 @@ function searchActor() {
     for (var i = 0; i < movies.length; i++) {
       var movieResult = document.createElement('div')
       movieResult.className = 'posters'
-      movieResult.innerHTML = "<h3>" + movies[i].title + "</h3><br>" + "<img src='https://image.tmdb.org/t/p/w396/" + movies[i].poster_path +"'><br>"
+      // movieResult.innerHTML = "<h3>" + movies[i].title + "</h3><br>" + "<img src='https://image.tmdb.org/t/p/w185/" + movies[i].poster_path +"'><br>"
+      movieResult.innerHTML = "<img src='https://image.tmdb.org/t/p/w185/" + movies[i].poster_path +"'><br>"
       document.getElementById('results').appendChild(movieResult)
     }
   }
 
   function renderActor(actor) {
     // document.getElementById('face').className = "animated fadeIn"
-    document.getElementById('face').innerHTML = "<h3>" + actor.name + "</h3><br>" + "<img src='https://image.tmdb.org/t/p/w396/" + actor.profile_path +"'><br>"
+    // document.getElementById('face').innerHTML = "<h3>" + actor.name + "</h3><br>" + "<img src='http://image.tmdb.org/t/p/w185/" + actor.profile_path +"'><br>"
+    document.getElementById('face').innerHTML = "<h3>" + actor.name + "</h3><br>" + "<img src='http://image.tmdb.org/t/p/w780/" + actor.known_for[0].backdrop_path +"'><br>"
+    // document.getElementById('face').innerHTML = "<h3>" + actor.name + "</h3><br>" + "<img src='http://image.tmdb.org/t/p/w780/" + actor.backdrop_path +"'><br>"
   }
+
 
   function getMovieByActor(name, callback){
     name = escape(name) 

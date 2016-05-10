@@ -44,6 +44,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Welcome to movieBuff</title>
@@ -51,23 +53,23 @@
 
 <body>
 
-<div data-role="page">
+<div data-role="page" id="pagepiling">
  
     <div data-role="header" class="header">
         <p class="title">movieBuff</p>
     </div><!-- /header -->
 
-    <div id="landingPage">
+    <div id="landingPage" class="section">
         <div role="main" class="ui-content">
         <div>
-            <a href="search.html" id="landingPage"></a>
+            <!-- <a href="search.html" id="landingPage"></a> -->
             <p id='welcome'>Welcome to the movieBuff. Type in the name of your favourite actor and hit 'search' to see their best films!</p>
         </div>
     </div><!-- /content -->
     </div>
 
 
-    <div id="searchPage">
+    <div id="searchPage" class="section">
         <div role="main" class="ui-content">
             <p> Type in the name of your favourite actor and hit 'search' to see their best films!</p>
                 <input id="searchInput" data-wrapper-class="ui-custom" type ="text" name="actor">
@@ -86,13 +88,17 @@
 
 
     <script type="text/javascript" src="cordova.js"></script>
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="https://cdn.rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/bundle.js"></script>
 
     <script type="text/javascript">
         app.initialize();
+
+
     </script>
 </body>
 

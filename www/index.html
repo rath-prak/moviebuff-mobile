@@ -1,24 +1,5 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 
@@ -27,26 +8,14 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://code.jquery.com; style-src 'self' 'unsafe-inline' http://code.jquery.com; media-src *"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alvarotrigo/pagePiling.js/master/jquery.pagepiling.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.amber-orange.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Welcome to movieBuff</title>
 </head>
@@ -56,7 +25,7 @@
     <div data-role="page" id="one">
 
     <div data-role="header" data-position="fixed" class="header">
-        <h1>Movie Buff</h1>
+        <h1>Movie Buff.</h1>
     </div><!-- /header -->
 
     <div data-role="content" >  
@@ -64,12 +33,16 @@
             <img src="img/logo.png" id="logo">
             <h2 id="mainHeading">Welcome to Movie Buff</h2>
             <p class='bodyText'>Hit <span style="font-weight:400">'start'</span> to see your favourite actor's <br> best films!</p>
-            <p><a href="#two" data-role="button" data-transition="slide" class="mainButton">start</a></p>
+           <!--  <a href="#two" data-role="button" data-transition="slide" class="mdl-button mdl-js-button mdl-js-ripple-effect mainButton">start</a> -->
+
+           <a href="#two" data-transition="slide" class="button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">start</a>
+
+    
         </div>
     </div><!-- /content -->
     
     <div data-role="footer" data-position="fixed" class="footer">
-        <h4>Movie Buff</h4>
+        <h4>Movie Buff.</h4>
     </div><!-- /footer -->
 </div><!-- /page one -->
 
@@ -78,14 +51,26 @@
 <div data-role="page" id="two">
 
     <div data-role="header" data-position="fixed" class="header">
-        <h1>The MovieBuff</h1>
+        <h1>Movie Buff.</h1>
     </div><!-- /header -->
         <div data-role="content">  
             <div class="searchPage">
-                <img src="img/logo.png" id="logo">  
+                
+
+                        <!-- earch input -->
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="searchInput" name="actor">
+                        <label class="mdl-textfield__label" for="sample1" id="searchLabel">Search here</label>
+                    </div>
+                </form>
+
+
+                <!-- <img src="img/logo.png" id="logo">   -->
                 <p class='bodyText' id="searchPageText">Type in the name of your favourite actor and hit 'search' to see their best films!</p>
-                <input id="searchInput" data-wrapper-class="ui-custom" type ="text" name="actor">
-                <a href="#three" data-role="button" id="button" class="mainButton" data-transition="slide">Search</a>
+                <!-- <input id="searchInput" data-wrapper-class="ui-custom" type ="text" name="actor"> -->
+                <!-- <a href="#three" data-role="button" id="button" class="mainButton" data-transition="slide">Search</a> -->
+                <a href="#three" data-transition="slide" id="button" class="button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">search</a>
         </div>
         
     </div><!-- /content -->
@@ -100,30 +85,33 @@
 <div data-role="page" id="three">
 
     <div data-role="header" data-position="fixed" class="header">
-        <h1>The MovieBuff</h1>
+        <h1>Movie Buff.</h1>
     </div><!-- /header -->
 
     <div data-role="content"> 
         <div id="face"></div>
         <p id="recommendation">movie recommendations</p> 
         <div id='results'></div> 
-      <p id="newSearch"><a href="#two" data-direction="reverse" data-role="button" data-transition="slide">new search</a></p> 
+      <!-- <p id="newSearch"><a href="#two" data-direction="reverse" data-role="button" data-transition="slide">new search</a></p>  -->
+     
+    <div id="pageThreeSearch">
+        <a href="#two" data-transition="slide" class="button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">new search</a>
+    </div>
+     
         
     </div><!-- /content -->
     
     <div data-role="footer" data-position="fixed" class="footer">
-        <h4>The MovieBuff</h4>
+        <h4>MovieBuff.</h4>
     </div><!-- /footer -->
 </div><!-- /page two -->
-
-<!-- ***************** PAGE popup *********************** -->
-
 
 
     <script type="text/javascript" src="cordova.js"></script>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/bundle.js"></script>
 

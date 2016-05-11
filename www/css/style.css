@@ -12,7 +12,9 @@ body {
 }
 
 #one, #two, #three{
-  background: linear-gradient(#EB3349, #F45C43);
+  /*background: linear-gradient(#EB3349, #F45C43);*/
+  /*background: linear-gradient(#757F9A, #D7DDE8);*/
+  background: linear-gradient(#1F1C2C, #928DAB);
 
 }
 
@@ -20,13 +22,8 @@ body {
   padding: 0 !important;
 }
 
-#searchInput {
-  font-weight: 700;
-  text-align: center;
-  height: 80px;
-  border-radius: 8px;
-  font-size: 30px;
-  background: #fff;
+.ui-input-text, .ui-input-search {
+    border-style: none; 
 }
 
 .ui-input-text.ui-custom {
@@ -41,7 +38,7 @@ body {
   font-weight: 100;
   margin-bottom: 20px;
 }
-.mainButton{
+/*.mainButton{
   width: 130px;
   height: 22px;
   background: #fff;
@@ -51,38 +48,50 @@ body {
   font-size: 25px;
   color: #F45C43;
   line-height: 22px;
+}*/
+
+/* ---- Buttons ----- */
+.button{
+  width: 150px;
+  /*height: 40px !important;*/
+  /*border-radius: 35px !important;*/
+  box-shadow: none !important;
+  /*line-height: 50px !important;*/
+  font-size: 16px !important;
 }
 
-/* ------------- HEADER ------------- */
+
+/* ------------- HEADER and FOOTER------------- */
 
 .ui-footer, .ui-header {
   border: none;
 }
-.footer {
-  background: #fff;
-  height: 40px;
-}
-.footer h4 {
-  margin-top: 30px !important;
-  color: #EA384D !important;
-  margin-top: 0px !important;
-
-}
 
 .header {
-  background: #fff;
+  background: #1F1C2C;
   height: 60px;
 }
 
 .header h1 {
-  margin-top: 30px !important;
-  color: #EA384D !important;
+  margin-top: 25px !important;
+  color: #fff !important;
   margin-bottom: 0px !important;
+  text-transform: none;
 
 }
 
+.footer {
+  background: #928DAB;
+  height: 40px;
+}
+.footer h4 {
+  margin-top: 30px !important;
+  color: #1F1C2C !important;
+  margin-top: 0px !important;
 
-#title {
+}
+
+/*#title {
   margin-top: 30px;
   font-family: 'Inconsolata';
   text-transform: lowercase;
@@ -91,7 +100,7 @@ body {
   color: #fff;
   font-style: normal;
   text-align: center;
-}
+}*/
 #welcomeText {
   text-transform: none;
   text-align: center;
@@ -122,11 +131,11 @@ body {
   width: 100%;
 }
 
-.posters h5 {
+/*.posters h5 {
   color: black;
   text-align: center;
 
-}
+}*/
 #face {
   position: relative;
   /*height: 210px;*/
@@ -149,12 +158,13 @@ body {
   background: rgba(0,0,0,.4);
   width: 100%;
   text-align: center;
-  padding: 10px;
+  /*padding: 10px;*/
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
 /*  left: 0;*/
   font-family: 'Roboto', sans-serif;
   font-size: 14px !important;
+  margin-bottom: 0 !important;
 }
 
 #recommendation {
@@ -164,14 +174,15 @@ body {
   font-size: 20px;
   /*background: #A21C2D;*/
   line-height: 45px;
-  color: black;
+  color: #fff;
+  margin-bottom: 0 5px !important;
 }
 
 
 /* ------------- PAGE 1 ------------- */
 
 .landingPage, .searchPage{
-  margin-top: 220px;
+  margin-top: 170px;
   text-align: center;
   text-transform: none !important;
 }
@@ -199,17 +210,36 @@ body {
 /* ------------- PAGE 2 ------------- */
 
 #searchInput{
-  width: 90%;
-  margin-bottom: 10px !important;
-  background: #FF5F44;
-  margin: 0 auto !important;
-  /*text-align: center !important;*/
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
 }
+
 
 #searchPageText{
-  padding: 30px;
+  padding: 0 30px 0;
 }
 
+#searchLabel{
+  color: rgba(255,255,255,0.5);
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 55px;
+}
+
+/* ------------- PAGE 3 ------------- */
+.movieResult h5{
+  margin-top: 10px;
+  font-size: 12px !important;
+  text-align: center;
+}
+#pageThreeSearch{
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+}
 
 
 

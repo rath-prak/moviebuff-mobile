@@ -1,19 +1,26 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,300);
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
 
 *{
   padding: 0;
   margin: 0;
 }
 
-body{
-  background: linear-gradient(#000000, #53346D);
-  font-family: 'Roboto Mono';
+body {
+  /*background: linear-gradient(#EB3349, #F45C43);*/
+  font-family: 'Roboto', sans-serif;
   color: #fff;
 }
 
-#searchInput{
-  font-family: 'Inconsolata';
+#one, #two, #three{
+  background: linear-gradient(#EB3349, #F45C43);
+
+}
+
+.ui-content {
+  padding: 0 !important;
+}
+
+#searchInput {
   font-weight: 700;
   text-align: center;
   height: 80px;
@@ -27,32 +34,55 @@ body{
    box-shadow: none;
 }
 
-.ui-header{
-  border: none;
-}
+/* ------------- GLOBAL STYLES ------------- */
 
-#landingPage{
-  display: block;
-  width: 100%;
-  height: 400px;
-  background: transparent;
+.bodyText {
+  font-size: 18px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.mainButton{
+  width: 130px;
+  height: 22px;
+  background: #fff;
+  border-radius: 45px;
+  margin: 0 auto;
+  text-decoration: none;
+  font-size: 25px;
+  color: #F45C43;
+  line-height: 22px;
 }
 
 /* ------------- HEADER ------------- */
 
-.header{
-  background: #706CBA;
+.ui-footer, .ui-header {
+  border: none;
+}
+.footer {
+  background: #fff;
+  height: 40px;
+}
+.footer h4 {
+  margin-top: 30px !important;
+  color: #EA384D !important;
+  margin-top: 0px !important;
+
+}
+
+.header {
+  background: #fff;
   height: 60px;
 }
 
-.header h1{
+.header h1 {
   margin-top: 30px !important;
+  color: #EA384D !important;
+  margin-bottom: 0px !important;
+
 }
 
-#mainLandingPage{
-  background: #9B95FF;
-}
-#title{
+
+#title {
   margin-top: 30px;
   font-family: 'Inconsolata';
   text-transform: lowercase;
@@ -62,16 +92,16 @@ body{
   font-style: normal;
   text-align: center;
 }
-#welcomeText{
+#welcomeText {
   text-transform: none;
   text-align: center;
-  font-family: 'Roboto Mono';
+  /*font-family: 'Roboto Mono';*/
   font-weight: 500;
 }
 
 
 /* ------------- POSTER IMAGES / RESULTS PAGE ------------- */
-.posters{
+.posters {
   display: inline-block;
   float: left;
   height: 179px;
@@ -81,36 +111,104 @@ body{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 4px solid rgba(255,255,255,0.2);
 
 }
-.posters:nth-child(2){
-  border-width: 2px 1px 2px 1px;
+.posters:nth-child(2) {
+  border-width: 4px 2px 4px 2px;
 }
-.posters img{
+.posters img {
   height: 175px;
   width: 100%;
- 
 }
-#face{
-  width: 100%;
-  margin-bottom: 5px;
+
+.posters h5 {
+  color: black;
+  text-align: center;
+
 }
-#face img{
+#face {
+  position: relative;
+  /*height: 210px;*/
+ /* margin-bottom: 5px;*/
+  padding-top: 0px;
+  margin-top: 0px;
+}
+#face img {
   width: 100%; 
-  box-sizing: border-box;
+  height:auto;
+  margin-top: -15px;
+  /*height: 210px;*/
+/*  box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;*/
 
-  border: 2px solid rgba(255,255,255,0.2);
+  /*border: 4px solid rgba(255,255,255,0.2);*/
+}
+#face h3 {
+  background: rgba(0,0,0,.4);
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 2px;
+/*  left: 0;*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px !important;
+}
+
+#recommendation {
+  height: 45px !important;
+  /*text-align: center !important;*/
+  text-transform: none !important;
+  font-size: 20px;
+  /*background: #A21C2D;*/
+  line-height: 45px;
+  color: black;
+}
+
+
+/* ------------- PAGE 1 ------------- */
+
+.landingPage, .searchPage{
+  margin-top: 220px;
+  text-align: center;
+  text-transform: none !important;
+}
+
+#mainHeading {
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+#logo{
+  width:80px;
+  margin: 0 auto 20px;
 }
 
 
 
+.overviewText {
+  display: none;
+}
+.overviewTextShow .overviewText{
+  display: block;
+}
 
+/* ------------- PAGE 2 ------------- */
 
+#searchInput{
+  width: 90%;
+  margin-bottom: 10px !important;
+  background: #FF5F44;
+  margin: 0 auto !important;
+  /*text-align: center !important;*/
+}
 
-
+#searchPageText{
+  padding: 30px;
+}
 
 
 

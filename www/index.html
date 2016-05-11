@@ -52,25 +52,24 @@
 </head>
 
 <body>
-
 <!-- ***************** PAGE 1 *********************** -->
     <div data-role="page" id="one">
 
     <div data-role="header" data-position="fixed" class="header">
-        <h1>The MovieBuff</h1>
+        <h1>Movie Buff</h1>
     </div><!-- /header -->
 
     <div data-role="content" >  
-        <h2>Welcome to movie buff</h2>
-        
-        <p id='welcome'>Welcome to the movieBuff. Type in the name of your favourite actor and hit 'search' to see their best films!</p>
-
-        <h3>Show internal pages:</h3>
-        <p><a href="#two" data-role="button">Show page "two"</a></p>
+        <div class="landingPage">
+            <img src="img/logo.png" id="logo">
+            <h2 id="mainHeading">Welcome to Movie Buff</h2>
+            <p class='bodyText'>Hit <span style="font-weight:400">'start'</span> to see your favourite actor's <br> best films!</p>
+            <p><a href="#two" data-role="button" data-transition="slide" class="mainButton">start</a></p>
+        </div>
     </div><!-- /content -->
     
-    <div data-role="footer" data-position="fixed">
-        <h4>The MovieBuff</h4>
+    <div data-role="footer" data-position="fixed" class="footer">
+        <h4>Movie Buff</h4>
     </div><!-- /footer -->
 </div><!-- /page one -->
 
@@ -81,15 +80,17 @@
     <div data-role="header" data-position="fixed" class="header">
         <h1>The MovieBuff</h1>
     </div><!-- /header -->
-
-    <div data-role="content">    
-        <p> Type in the name of your favourite actor and hit 'search' to see their best films!</p>
+        <div data-role="content">  
+            <div class="searchPage">
+                <img src="img/logo.png" id="logo">  
+                <p class='bodyText' id="searchPageText">Type in the name of your favourite actor and hit 'search' to see their best films!</p>
                 <input id="searchInput" data-wrapper-class="ui-custom" type ="text" name="actor">
-            <a href="#three" data-role="button" data-icon="star" id="button">Search</a>
+                <a href="#three" data-role="button" id="button" class="mainButton" data-transition="slide">Search</a>
+        </div>
         
     </div><!-- /content -->
     
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" class="footer">
         <h4>The MovieBuff</h4>
     </div><!-- /footer -->
 </div><!-- /page two -->
@@ -102,19 +103,20 @@
         <h1>The MovieBuff</h1>
     </div><!-- /header -->
 
-    <div data-role="content">  
+    <div data-role="content"> 
         <div id="face"></div>
-        <div id='results'></div>  
-      <p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p> 
+        <p id="recommendation">movie recommendations</p> 
+        <div id='results'></div> 
+      <p id="newSearch"><a href="#two" data-direction="reverse" data-role="button" data-transition="slide">new search</a></p> 
         
     </div><!-- /content -->
     
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" class="footer">
         <h4>The MovieBuff</h4>
     </div><!-- /footer -->
 </div><!-- /page two -->
 
-
+<!-- ***************** PAGE popup *********************** -->
 
 
 
